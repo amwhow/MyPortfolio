@@ -1,0 +1,117 @@
+/* General page layout settings accross the site */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Tamma 2', cursive;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(-45deg,  #011627, #2ec4b6);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    height: 85vh;
+    color: #FDFFFC;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-self: center;
+}
+
+/* Download CV button with color transfrom effect */
+.cv a {
+    color: #FDFFFC;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a:hover {
+    color: #ff9f1c;
+    transition: 0.3s;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ff9f1c;
+    -webkit-text-stroke: 1px #011627;
+}
+
+.cv {
+    display: flex;
+    align-items: flex-start;   
+}
+
+.cv a {
+    position: relative;
+    right: 0.5rem;
+}
+
+.cv img {
+    width: 2rem;
+    position: relative;
+    right: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 35vw;
+    margin: 0 2rem;
+}
+
+main label, input, textarea {
+    clear: both;
+    width: 100%;
+    border-radius: 10px;
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    margin: 0 2rem;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #ff9f1c;
+    color: #FDFFFC;
+    transition: all 0.2s;
+}
+
+footer {
+    height: 20vh;
+    text-align: center;
+    color: #FDFFFC;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* footer, including my contact details and social media links */
+footer p {
+    font-size: 1rem;
+}
+
+.footer_text {
+   place-self: center;
+}
+
+footer img {
+    width: 32px;
+    height: 32px;
+    margin: 0 15px;
+}
+
+/* responsive layout for smartphone viewport, increased width */
+@media only screen and (max-width:650px) {
+    form {
+        width: 65vw;
+    }
+}

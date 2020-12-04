@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>Mark's Portfolio</title>
+    <link rel = 'stylesheet' href = 'nav.css'>
+
+<!-- SRI: I have uploaded homepage css file to github and imported that as an external file to engage SRI. The .css file can also be found in the local folder (home.css) -->
+    <link rel = 'stylesheet' href = 'https://gitcdn.link/repo/amwhow/Mark_new/master/home.css' integrity = 'sha384-howJoej83ZnK5gxlpWTC8m3RDYlXfJDXM3Cg+dubmDizgQL9ZiYe4grCCSosOKyS' crossorigin="anonymous">
+    <link rel = 'icon' href = '../docs/work.png'>
+    <meta name= 'viewport' content = 'width=device-width, initial-scale=1.0'>
+<head>
+
+<body>
+<!--nav bar that fixed on the top of page, with responsive dropdown feature -->
+    <nav>
+        <div class = 'logo'>
+<!-- logo image credit to 'https://www.creativefabrica.com/product/letter-m-icon-851/' -->
+            <a href = 'home.html'><img alt = "Mark's logo" src = '../docs/logo.png'></img></a>
+        </div>
+
+<!-- Dropdown hamburger button -->
+        <a class = 'toggle_button' href = '#'>
+            <span class = 'bar'></span>
+            <span class = 'bar'></span>
+            <span class = 'bar'></span>
+        </a>
+
+<!-- Navbar buttons -->
+        <div class = 'navbar_links'>
+            <ul>
+                <li><a href ="home.html">Home</a></li>
+                <li><a href ="projects.html">Projects</a></li>
+                <li><a href ="about_me.html">About me</a></li>
+                <li><a href ="blogs.html">Blogs</a></li>
+                <li><a href ="Contact_me.html">Contact me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- main text area, introduce the page in one sentence-->
+    <main>
+        <div class = 'mainbox'> 
+            <h1>Hi, I am Mark,<br> A potential <span>full-stack developer</span><br> who is eager to design and code!</h1><br>
+            <!-- Animated button, link to View Projects page -->
+            <a class = 'View Projects' href="projects.html">View Projects</a>   
+        </div>
+    </main>
+    
+</body>
+
+<!-- Navbar dropdown button feature -->
+<script>
+    const navbarLinks = document.getElementsByClassName('navbar_links')[0];
+    const toggleButton = document.getElementsByClassName('toggle_button')[0];
+
+    toggleButton.addEventListener("click", () => {
+        navbarLinks.classList.toggle('active')
+    })
+</script>

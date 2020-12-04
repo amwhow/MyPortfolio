@@ -1,0 +1,177 @@
+/* General page layout settings accross the site */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Tamma 2', cursive;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(-45deg,  #011627, #2ec4b6);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    height: 100vh;
+    color: #FDFFFC;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.mainbox h1 {
+    text-align: center;
+}
+
+.post_overview {
+    display: flex;
+    place-items: center;
+    width: 85vw;
+    height: 15vh;
+    margin: 15px auto;
+    border-radius: 20px;
+}
+
+.post_overview p {
+   margin: 0 auto;
+   font-size: 1.25em;
+}
+
+.post_title span {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.post-unfolded {
+    display: none;
+}
+
+.blog_post {
+    margin: 0 auto;
+    width: 60vw;
+    padding: 1.5em;
+}
+/* keyframes animation, give buttons a welcome easein from the top */
+@keyframes EaseIn1 {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes EaseIn2 {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    40% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes EaseIn3 {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes EaseIn4 {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes EaseIn5 {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.post_1 {
+    background-color: #2ec4b6;
+    animation: EaseIn1 2.5s;
+}
+
+.post_2 {
+    background-color: #e71d36;
+    animation: EaseIn2 2s;
+}
+
+.post_3 {
+    background-color: #011627;
+    animation: EaseIn3 1.5s;
+}
+
+.post_4 {
+    background-color: #ff9f1c;
+    animation: EaseIn4 1s;
+}
+
+.post_5 {
+    color: #011627;
+    background-color: #FDFFFC;
+    animation: EaseIn5 0.75s;
+}
+
+.mainbox a {
+    text-decoration: none;
+    color: #FDFFFC
+}
+
+.post_1:hover {
+    color: #2ec4b6;
+    background-color: #FDFFFC;
+    transition: all 0.4s;
+}
+
+.post_2:hover {
+    color:#e71d36;
+    background-color: #FDFFFC;
+    transition: all 0.4s;
+}
+
+.post_3:hover {
+    color: #011627;
+    background-color: #FDFFFC;
+    transition: all 0.4s;
+}
+
+.post_4:hover {
+    color: #ff9f1c;
+    background-color: #FDFFFC;
+    transition: all 0.4s;
+}
+
+.post_5:hover {
+    color: #FDFFFC;
+    background-color: #011627;
+    transition: all 0.4s;
+}
+/* responsive design for smartphone viewports*/
+@media only screen and (max-width: 650px) {
+    .post_title {
+        font-size: 0.75em;
+        padding: 10px;
+    }
+}

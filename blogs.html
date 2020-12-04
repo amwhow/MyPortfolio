@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Mark's Portfolio</title>
+    <link rel = 'stylesheet' href = 'nav.css'>
+    <link rel = 'stylesheet' href = 'blogs.css'>
+    <link rel = 'icon' href = '../docs/work.png'>
+    <meta name= 'viewport' content = 'width=device-width, initial-scale=1.0'>
+<head>
+
+<body>
+<!--nav bar that fixed on the top of page, with responsive dropdown feature -->
+    <nav>
+        <div class = 'logo'>
+<!-- logo image credit to 'https://www.creativefabrica.com/product/letter-m-icon-851/' -->
+            <a href = 'home.html'><img alt = "Mark's logo" src = '../docs/logo.png'></img></a>
+        </div>
+<!-- Dropdown hamburger button -->
+        <a class = 'toggle_button' href = '#'>
+            <span class = 'bar'></span>
+            <span class = 'bar'></span>
+            <span class = 'bar'></span>
+        </a>
+<!-- Navbar buttons -->
+        <div class = 'navbar_links'>
+            <ul>
+                <li><a href ="home.html">Home</a></li>
+                <li><a href ="projects.html">Projects</a></li>
+                <li><a href ="about_me.html">About me</a></li>
+                <li><a href ="blogs.html">Blogs</a></li>
+                <li><a href ="Contact_me.html">Contact me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- main section, list of blogs, buttons with hover effect, linked to external pages-->
+    <main>
+        <div class = 'mainbox'> 
+            <h1>Blogs</h1>
+                <a href = 'blog1.html' target = '_blank'>
+                    <div class = 'post_overview post_1'>
+                        <p class = 'post_title'>1. A roadmap to be a full-stack developer. <span>(Posted by: 25 Sep 2017)</span></p>
+                    </div>
+                </a>
+
+                <a href = 'blog2.html' target = '_blank'>
+                    <div class = 'post_overview post_2'>
+                        <p class = 'post_title'>2. Top 10 destinations in Melbourne. <span>(Posted by: 25 Dec 2018)</span></p>
+                    </div>
+                </a>
+
+                <a href = 'blog3.html' target = '_blank'>
+                    <div class = 'post_overview post_3'>
+                        <p class = 'post_title'>3. Things you need to know to become a pro tennis player.<span>(Posted by: 5 Oct 2019)</span></p>
+                    </div>
+                </a>
+
+                <a href = 'blog4.html' target = '_blank'>
+                    <div class = 'post_overview post_4'>
+                        <p class = 'post_title'>4. This is how I earned my first home one year after graduate. <span>(Posted by: 21 Dec 2019)</span></p>
+                    </div>
+                </a>
+
+                <a href = 'blog5.html' target = '_blank'>
+                    <div class = 'post_overview post_5'>
+                        <p class = 'post_title'>5. Japanese Spitz gallery. <span>(Posted by: 15 Apr 2020)</span></p>
+                    </div>
+                </a>
+        </div>
+    </main>
+
+<!-- Navbar dropdown button feature -->
+<script>
+    const navbarLinks = document.getElementsByClassName('navbar_links')[0];
+    const toggleButton = document.getElementsByClassName('toggle_button')[0];
+
+    toggleButton.addEventListener("click", () => {
+        navbarLinks.classList.toggle('active')
+    })
+</script>
+
+<!-- post images credit: 
+post 1: https://skillcrush.com/blog/how-to-become-a-full-stack-developer/
+post 2: https://www.visitmelbourne.com/regions/Melbourne/Things-to-do/Tours/Melbourne-Helicopters/Melbournes-Brighton-Beach-Boxes-Helicopter-Tour
+post 3: https://www.forbes.com/sites/daniellerossingh/2020/02/20/roger-federer-eyes-wimbledon-after-knee-surgery/#3df7dff7d94e
+post 4: https://www.bhg.com.au/how-much-does-a-house-cost
+post 5: https://www.allthingsdogs.com/japanese-spitz/ -->

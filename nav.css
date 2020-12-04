@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;700&display=swap');
+
+* {
+    margin: 0px;
+    font-family: 'Baloo Tamma 2', cursive;
+    box-sizing: border-box;
+}
+
+nav {
+    height: 15vh;
+    background-color: #011627;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    z-index: 99;
+}
+
+/* hover to show the navbar */
+nav:hover {
+    opacity: 100%;
+    transition: 0.2s;
+}
+
+.logo {
+    height: 100%;
+}
+
+.logo a {
+    height: 100%;
+    display: inline-block;
+}
+
+.logo img {
+    display: block;
+    height: 100%;
+    /* height: 5rem;
+    width: 5rem;
+    position: relative;
+    top: 5px; */
+}
+
+.navbar_links {
+    width: 100%;
+}
+
+.navbar_links ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+}
+
+.navbar_links ul a {
+    text-decoration: none;
+    color: #FDFFFC;
+    font-size: 1.5rem;
+    padding: 10px 16px;
+    position: relative;
+    border: #011627 solid 2px;
+    flex-wrap: nowrap;
+}
+
+/* navbar button hover effect */
+.navbar_links ul a:hover {
+    border: #2EC4B6 solid 2px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.toggle_button {
+    position: absolute;
+    align-self: flex-end;
+    width: 30px;
+    height: 30px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 3;
+}
+
+.toggle_button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #FDFFFC;
+    border-radius: 40px;
+}
+
+/* Responsive layout for smartphone viewport, change the layout to dropdown menu*/
+@media only screen and (max-width: 650px) {
+    .toggle_button {
+        margin-right: 10px;
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .navbar_links{
+        display: none;
+    }
+
+    .navbar_links ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar_links ul li {
+        margin: 0.5em;
+    }
+
+    .navbar_links ul a {
+        padding: 0.25em;
+    }
+
+    .navbar_links ul a:hover {
+        border: #2EC4B6 solid 2px;
+        border-radius: 10px;
+        transition: 0.2s;
+    }
+
+    .navbar_links.active {
+        display: flex;
+        background: #011627;
+        z-index: 2;
+        position: relative;
+        top: 80px;
+        padding: 10px;
+    }
+}

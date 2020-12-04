@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Mark's Portfolio</title>
+    <link rel = 'stylesheet' href = 'nav.css'>
+    <link rel = 'stylesheet' href = 'Contact_me.css'>
+    <link rel = 'icon' href = '../docs/work.png'>
+    <meta name= 'viewport' content = 'width=device-width, initial-scale=1.0'>
+<head>
+
+<body>
+<!--Framed Nav bar, indicating the current page with an underline, use box-shadow-->
+
+   <nav>
+        <div class = 'logo'>
+<!-- image credit to 'https://www.creativefabrica.com/product/letter-m-icon-851/' -->
+            <a href = 'home.html'><img alt = "Mark's logo" src = '../docs/logo.png'></img></a>
+        </div>
+
+        <a class = 'toggle_button' href = '#'>
+            <span class = 'bar'></span>
+            <span class = 'bar'></span>
+            <span class = 'bar'></span>
+        </a>
+
+        <div class = 'navbar_links'>
+            <ul>
+                <li><a href ="home.html">Home</a></li>
+                <li><a href ="projects.html">Projects</a></li>
+                <li><a href ="about_me.html">About me</a></li>
+                <li><a href ="blogs.html">Blogs</a></li>
+                <li><a href ="Contact_me.html">Contact me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Contact me</h1>
+        <div class = 'cv'>
+                <img src = '../docs/image.png' alt = 'resume image'>
+                <a href='../docs/mockup resume.pdf'>Download CV here (mockup)</a>
+            </div>
+<!-- form imported from formspree -->
+        <form action="https://formspree.io/xdowrlpn" method="POST">
+            <label>
+                Name:
+                <input type="text" name="name">
+            </label>
+            <label>
+                Email:
+                <input type="text" name="email">
+            </label>
+            <label>
+                Your message:
+                <textarea name="message"></textarea>
+            </label><br>
+        <button type="submit" value="submit">Send</button>
+        </form>
+    </main>
+
+<!-- Navbar dropdown button feature -->
+<script>
+    const navbarLinks = document.getElementsByClassName('navbar_links')[0];
+    const toggleButton = document.getElementsByClassName('toggle_button')[0];
+
+    toggleButton.addEventListener("click", () => {
+        navbarLinks.classList.toggle('active')
+    })
+</script>
+
+<footer>
+    <hr>
+    <div class = 'footer_text'>
+        <p>Mark Huang</p>
+        <p>Email: amwhow@gmail.com</p>
+        <a href ='https://github.com/amwhow/'><img src = '../docs/GitHub-Mark-Light-64px.png' alt = 'github icon'></a>
+        <a href ='www.linkedin.com/in/hao-huang-a95015142'><img src = '../docs/LinkedIn.png' alt = 'linkedin icon'></a>
+        <a href ='https://www.facebook.com/profile.php?id=100009841602564'><img src = '../docs/facebook.png' alt = 'facebook icon'></a>
+    </div>
+</footer>

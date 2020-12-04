@@ -1,0 +1,73 @@
+/* General page layout settings accross the site */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Tamma 2', cursive;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(-45deg,  #011627, #2ec4b6);
+    height: calc(85vh + 15vh);
+}
+
+main {
+    width: 100%;
+    height: 85vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FDFFFC;
+}
+
+/* main introductionn text with animated button*/
+.mainbox {
+    width: 50%;
+    height: fit-content;
+    border: #FDFFFC 3px solid;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center; 
+}
+
+.mainbox span {
+    color: #ff9f1c;
+}
+.mainbox a{
+    text-decoration: none;
+    color: #FDFFFC;
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s;
+}
+
+/* Animated 'View Projects' button */
+.mainbox a:hover {
+    padding-right: 25px;
+    transition: 0.3s;
+    color: #ff9f1c;
+}
+
+.mainbox a:after {
+    content: '\00bb';
+    opacity: 0;
+    position: relative;
+    right: -20px;
+    font-size: 25px;
+    color: #ff9f1c;
+    transition: 0.3s;
+}
+
+.mainbox a:hover:after {
+    opacity: 1;
+    right: -10px;
+}
+/* responsive layout for smartphone viewport*/
+@media only screen and (max-width:650px) {
+    .mainbox {
+        width: 75%;
+    }
+}
+

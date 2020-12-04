@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Mark's Portfolio</title>
+    <link rel = 'stylesheet' href = 'nav.css'>
+    <link rel = 'stylesheet' href = 'projects.css'>
+    <link rel = 'icon' href = '../docs/work.png'>
+    <meta name= 'viewport' content = 'width=device-width, initial-scale=1.0'>
+<head>
+
+<body>
+<!--nav bar that fixed on the top of page, with responsive dropdown feature -->
+    <nav>
+        <div class = 'logo'>
+<!-- logo image credit to 'https://www.creativefabrica.com/product/letter-m-icon-851/' -->
+            <a href = 'home.html'><img alt = "Mark's logo" src = '../docs/logo.png'></img></a>
+        </div>
+<!-- Dropdown hamburger button -->
+        <a class = 'toggle_button' href = '#'>
+            <span class = 'bar'></span>
+            <span class = 'bar'></span>
+            <span class = 'bar'></span>
+        </a>
+<!-- Navbar buttons -->
+        <div class = 'navbar_links'>
+            <ul>
+                <li><a href ="home.html">Home</a></li>
+                <li><a href ="projects.html">Projects</a></li>
+                <li><a href ="about_me.html">About me</a></li>
+                <li><a href ="blogs.html">Blogs</a></li>
+                <li><a href ="Contact_me.html">Contact me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<h1>My Projects</h1>
+<!-- Main section, contains projects snapshots and links-->
+    <main>
+        <div class = 'projects_box'> 
+            <div class = 'project_outline project1'>
+                <h2>1. Linkin Park fan page</h2>
+                <p>Language used: HTML, CSS</p>
+                <a class = 'button' href = 'https://markneri-gogosite-4e196.netlify.app/' target = '_blank' >Go to site</a>
+            </div>
+        
+            <div class = 'project_outline project2'>
+                <h2>2. Mark Huang Portfolio</h2>
+                <p>Language used: HTML, CSS, JAVASCRIPT</p>
+                <a class = 'button' href = 'home.html' target = '_blank' >Go to site</a>
+            </div>
+
+            <div class = 'project_outline project3'>
+                <h2>3. To be developed</h2>
+                <p>Language used: HTML, CSS</p>
+                <a class = 'button' href = 'Contact_me.html' target = '_blank' >Contact me</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+<!-- Navbar dropdown button feature -->
+<script>
+    const navbarLinks = document.getElementsByClassName('navbar_links')[0];
+    const toggleButton = document.getElementsByClassName('toggle_button')[0];
+
+    toggleButton.addEventListener("click", () => {
+        navbarLinks.classList.toggle('active')
+    })
+</script>

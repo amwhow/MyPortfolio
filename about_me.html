@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Mark's Portfolio</title>
+    <link rel = 'stylesheet' href = 'nav.css'>
+    <link rel = 'stylesheet' href = 'about_me.css'>
+    <link rel = 'icon' href = '../docs/work.png'>
+    <meta name= 'viewport' content = 'width=device-width, initial-scale=1.0'>
+<head>
+
+<body>
+<!--nav bar that fixed on the top of page, with responsive dropdown feature -->
+    <nav>
+        <div class = 'logo'>
+<!-- logo image credit to 'https://www.creativefabrica.com/product/letter-m-icon-851/' -->
+            <a href = 'home.html'><img alt = "Mark's logo" src = '../docs/logo.png'></img></a>
+        </div>
+<!-- Dropdown hamburger button -->
+        <a class = 'toggle_button' href = '#'>
+            <span class = 'bar'></span>
+            <span class = 'bar'></span>
+            <span class = 'bar'></span>
+        </a>
+<!-- Navbar buttons -->
+        <div class = 'navbar_links'>
+            <ul>
+                <li><a href ="home.html">Home</a></li>
+                <li><a href ="projects.html">Projects</a></li>
+                <li><a href ="about_me.html">About me</a></li>
+                <li><a href ="blogs.html">Blogs</a></li>
+                <li><a href ="Contact_me.html">Contact me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- Main section, contains my photos and introduction-->
+    <main>
+    <h1>Who is this guy?</h1>
+        <div class = 'intro_box'>
+            <div class = 'personal_info'>
+                <span>A little about me</span>
+                <img class = 'icon' src = '../docs/game-developer.png' ><br>
+                <p>Hi, I am Mark, a full stack web developer soon-to-be. I am enthusiastic about web development as well as UI/UX design. Delivering great user experiments is my persuit. I love playing tennis and basketball, as well as video games in my leisure time. Spending time with your mates is always great no?</p>
+            </div>
+            <img id = 'myImage' src = '../docs/Mark image bw.jpeg' alt = "Mark's photo">
+            <div class = 'education_and_skills'>
+                <span>Education and skills</span>
+                <img class = 'icon' src = '../docs/work.png' ><br>
+                <p>After getting my master degree at UoM, I started working as a translator in Melbourne in 2018 and quitted in 2020. Before my learning at Coder, I self-taught a bit of python and that's when I found my passion in coding. And here I am, on my way to achieve what I wanted to.</p>
+                <p class = 'description'>Photo taken after a Marathon with my colleagues at the translation company</p>
+            </div>
+            <img id = 'education' src = '../docs/Marathon.JPG' alt = 'image indicating education'>
+        </div>
+    </main>
+</body>
+
+<!-- Navbar dropdown button feature -->
+<script>
+    const navbarLinks = document.getElementsByClassName('navbar_links')[0];
+    const toggleButton = document.getElementsByClassName('toggle_button')[0];
+
+    toggleButton.addEventListener("click", () => {
+        navbarLinks.classList.toggle('active')
+    })
+</script>
